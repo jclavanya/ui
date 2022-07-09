@@ -1,0 +1,30 @@
+<h1 mat-dialog-title> Add Students Details</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="studentdetails" >
+    <mat-form-field appearance="outline">
+        <mat-label> Student Name</mat-label>
+        <input formControlName="name" matInput placeholder=" Enter Student Name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Student Name</mat-hint>
+      </mat-form-field>
+      <br>
+      <br>
+      <br>
+      
+    <mat-form-field appearance="outline">
+        <mat-label> Student Subjects</mat-label>
+        <input formControlName="subjects" matInput placeholder=" Enter Subjects">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Subjects</mat-hint>
+      </mat-form-field>
+
+      <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>CLOSE</button>
+        <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="save()">{{actionBtn}}</button>
+      </div>
+      
+    
+    </form>
+</div>
+
